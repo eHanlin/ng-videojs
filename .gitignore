@@ -1,5 +1,4 @@
 node_modules
 *.swp
 src/bower_components
-dist/
 build/
