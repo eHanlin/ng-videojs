@@ -49,9 +49,9 @@ angular.bootstrap( document, [app.name] );
 
 ## doc
 
-* [attribute](../blob/master/doc/attribute.md)
-* [event](../blob/master/doc/event.md)
-* [method](../blob/master/doc/method.md)
+* [attribute](../master/doc/attribute.md)
+* [event](../master/doc/event.md)
+* [method](../master/doc/method.md)
 
 
 ## Build Production
