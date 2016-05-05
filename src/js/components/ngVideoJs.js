@@ -35,7 +35,8 @@
         onChapterProgressClicked:"&",
         jsonp:"@",
         poster:"=",
-        setFns:"&"
+        setFns:"&",
+        playbackRate:"="
       },
 
       link:function( scope, element, attrs ){
@@ -135,10 +136,19 @@
           }
         };
 
+        var setPlaybackRate = function( playbackRate ) {
+          
+          myPlayer && myPlayer.playbackRate( playbackRate );
+        };
+
         scope.$on( '$destroy', function(){
           if (myPlayer) {
             myPlayer.dispose();
           }
+        });
+
+        scope.$watch('playbackRate', function(){
+          setPlaybackRate($scope.playbackRate);
         });
 
         scope.$watch( 'sources', function( currentSources ){
@@ -150,6 +160,7 @@
           var $video = $( element.find( 'video' ) );
 
           $video.find('source').remove();
+
           if (scope.autoplay) $video.prop('autoplay', true);
 
           for ( var i in scope.sources ) {
@@ -166,6 +177,8 @@
             else
               myPlayer = videojs( element.find('video').attr( 'id' ) );
             //myPlayer = videojs( element.find('video').attr( 'id' ) );
+            //
+            if (scope.playbackRate) setPlaybackRate($scope.playbackRate);
 
             textTrackDisplay = myPlayer.getChild("textTrackDisplay");
 
