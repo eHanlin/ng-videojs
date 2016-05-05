@@ -138,7 +138,7 @@
 
         var setPlaybackRate = function( playbackRate ) {
           
-          myPlayer && myPlayer.playbackRate( playbackRate );
+          myPlayer && myPlayer.playbackRate( playbackRate || 1 );
         };
 
         scope.$on( '$destroy', function(){
@@ -148,7 +148,7 @@
         });
 
         scope.$watch('playbackRate', function(){
-          setPlaybackRate($scope.playbackRate);
+          setPlaybackRate(scope.playbackRate);
         });
 
         scope.$watch( 'sources', function( currentSources ){
@@ -178,7 +178,7 @@
               myPlayer = videojs( element.find('video').attr( 'id' ) );
             //myPlayer = videojs( element.find('video').attr( 'id' ) );
             //
-            if (scope.playbackRate) setPlaybackRate($scope.playbackRate);
+            if (scope.playbackRate) setPlaybackRate(scope.playbackRate);
 
             textTrackDisplay = myPlayer.getChild("textTrackDisplay");
 
