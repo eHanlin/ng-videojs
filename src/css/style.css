@@ -1,0 +1,153 @@
+
+/*.page-container {
+	float:none;
+	margin:0 auto;
+}
+
+.video-container{
+	position:relative;
+}
+
+.video-container video{
+	width:100%;
+}
+
+.video-container .srt-text{
+	color:white;
+	bottom:45px;
+	width:100%;
+	position:absolute;
+}
+
+.video-controls {
+	background:rgba(0, 0, 0, 0.83);
+	border-radius:5px;
+	padding:6px;
+	width:98%;
+	left:1%;
+	position:absolute;
+	bottom:10px;
+}
+
+.video-controls .play-button{
+
+}
+
+.video-controls .progress-slider {
+	padding-left:2%;
+	width:75%;
+}
+
+.video-controls .rate {
+	width:10%;
+	text-align:center;
+}
+
+.slider.slider-horizontal {
+	width:100% !important;
+}
+
+.volume-container {
+	position:relative;
+}
+
+.volume-container .volume-inner-container{
+	position:absolute;
+	bottom:22px;
+	background:rgba(29, 29, 29, 0.79);
+	padding:2px;
+	padding-bottom:9px;
+	padding-top:10px;
+
+}
+
+.volume-container .volume-inner-container .slider.slider-vertical {
+	height:55px;
+}
+
+.video-container.max {
+	width:100%;
+}*/
+
+.video-container.max .srt-text{
+	font-size:xx-large;
+}
+
+
+.vjs-text-track-display {
+	bottom:1em !important;
+	text-shadow:0px 0px 5px rgba(22, 22, 22, 1);
+	font-size:16px;
+}
+
+.vjs-fullscreen .vjs-text-track-display {
+	font-size:xx-large;
+}
+.vjs-text-track-display .vjs-captions{
+	color:white !important;
+	background:none !important;
+}
+
+
+.caption tr.active span{
+	background:#d8d8d8;
+}
+
+.caption tr{
+	font-size:large;
+	line-height:30px;
+}
+
+.caption tr td.first {
+	width:25px;
+}
+
+.caption tr td{
+	vertical-align:top;
+}
+
+.caption tr.active i.glyphicon{
+	color:green;
+}
+
+.current-caption {
+	height:36px;
+}
+
+span.proper-noun {
+	cursor:pointer;
+	color:red;
+} 
+
+span.proper-noun.active {
+	background:#57f0fd !important;
+}
+
+span.proper-noun:hover {
+	background:#57f0fd !important;
+}
+
+.tip-window {
+
+	position: absolute;
+	background: white;
+	border-radius: 5px;
+	width:250px;
+	padding: 14px;    
+	border: 1px solid gray;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	color:#1a1a1a;
+
+}
+
+.tip-window h4{
+	font-weight:bold;
+}
+.tip-window h4,.tip-window div{
+	text-align:left;
+	text-shadow:none !important;
+	font-size:15px !important;
+	font-size:initial !important;
+}
+
