@@ -161,7 +161,10 @@
 
           $timeout(function(){
 
-            myPlayer = videojs( element.find('video').attr( 'id' ) );
+            if (myPlayer)
+              $video.get(0).load();
+            else
+              myPlayer = videojs( element.find('video').attr( 'id' ) );
             //myPlayer = videojs( element.find('video').attr( 'id' ) );
 
             textTrackDisplay = myPlayer.getChild("textTrackDisplay");
