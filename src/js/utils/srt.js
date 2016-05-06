@@ -159,15 +159,7 @@
 
           else data = data.data;
 
-          var filter_data = data.replace( /\r/g, "" );
-
-          var lines = filter_data.split( /\n\d+\n/ );
-
-          if ( lines.length ) lines[0] = lines[0].replace( /^\d+\n/,"" );
-
-          //console.log( data );
-
-          var srt_data = parse( lines );
+          var srt_data = _this.parse(data);
 
           //console.log(srt_data);
           //window.data = data;
@@ -179,6 +171,15 @@
         });
 
         return deferred.promise;
+      },
+
+      parse:function( data ) {
+        var filter_data = data.replace( /\r/g, "" );
+        var lines = filter_data.split( /\n\d+\n/ );
+
+        if ( lines.length ) lines[0] = lines[0].replace( /^\d+\n/,"" );
+
+        return parse( lines );
       },
 
       findOne:function( srt_info, currentTime ){
